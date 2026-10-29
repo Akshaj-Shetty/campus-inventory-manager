@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Inventory</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <p class="tag">CAMPUS TOOLS</p>
+      <h1>Inventory Manager<span>.</span></h1>
+      <p>Keep your essentials organised.</p>
+    </header>
+
+    <section class="panel">
+      <h2 id="formTitle">Add a new item</h2>
+
+      <form id="itemForm">
+        <input id="name" placeholder="Item name" required>
+        <input id="price" type="number" min="0" step="0.01"
+               placeholder="Price (₹)" required>
+        <button id="submitBtn" type="submit">+ Add item</button>
+        <button id="cancelBtn" type="button" hidden>Cancel edit</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <div class="listHeader">
+        <h2>Your items</h2>
+        <span id="count">0 items</span>
+      </div>
+
+      <p id="message" role="status"></p>
+
+      <div class="tableWrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Item name</th>
+              <th>Price</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="itemList"></tbody>
+        </table>
+      </div>
+    </section>
+    <footer>Campus Inventory · Simple. Smart. Organised.</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
